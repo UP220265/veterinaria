@@ -1,9 +1,25 @@
-import { Box, Typography, List, ListItem, ListItemText, Paper, Button } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import Link from "next/link";
+import ClienteCard from "../../components/ClienteCard";
 
+// Datos simulados por ahora
 const clientesPrueba = [
-  { id: 1, nombre: "Juan", apellido: "Pérez", telefono: "4491234567" },
-  { id: 2, nombre: "Ana", apellido: "Ramírez", telefono: "4497654321" },
+  {
+    id: 1,
+    nombre: "Juan",
+    apellido: "Pérez",
+    telefono: "4491234567",
+    email: "juan.perez@gmail.com",
+    direccion: "Calle 1 #123, Aguascalientes"
+  },
+  {
+    id: 2,
+    nombre: "Ana",
+    apellido: "Ramírez",
+    telefono: "4497654321",
+    email: "ana.ramirez@hotmail.com",
+    direccion: "Av. Reforma #456, Aguascalientes"
+  },
 ];
 
 export default function ListaClientes() {
@@ -15,18 +31,9 @@ export default function ListaClientes() {
           <Button variant="contained">Nuevo Cliente</Button>
         </Link>
       </Box>
-      <Paper>
-        <List>
-          {clientesPrueba.map((cliente) => (
-            <ListItem key={cliente.id} divider>
-              <ListItemText
-                primary={`${cliente.nombre} ${cliente.apellido}`}
-                secondary={`Tel: ${cliente.telefono}`}
-              />
-            </ListItem>
-          ))}
-        </List>
-      </Paper>
+      {clientesPrueba.map((cliente) => (
+        <ClienteCard key={cliente.id} cliente={cliente} />
+      ))}
     </Box>
   );
 }
