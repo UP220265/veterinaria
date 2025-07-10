@@ -7,7 +7,7 @@ const citasSimuladas = [
   {
     id: 1,
     fecha: "2025-07-15",
-    hora: "10:30",
+    hora: "11:30",
     motivo: "Vacunación anual",
     mascota: "Firulais",
     veterinario: "Carlos Sánchez",
