@@ -8,7 +8,7 @@ const mascotasPrueba = [
     id: 1,
     nombre: "Firulais",
     especie: "Perro",
-    raza: "Labrador",
+    raza: "Doberman",
     color: "Negro",
     sexo: "Macho",
     pesoKg: 25.4,
